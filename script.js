@@ -90,3 +90,19 @@ setInterval(() => {
     }
     depoimentos[indiceAtual]?.classList.add('ativo');
 }, 1500);
+
+// ============ MENU HAMBÚRGUER ============
+const btnHamburguer = document.getElementById('btn-hamburguer');
+const menu = document.getElementById('menu');
+
+btnHamburguer.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    btnHamburguer.textContent = aberto ? '✕' : '☰';
+});
+
+menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('aberto');
+        btnHamburguer.textContent = '☰';
+    });
+});

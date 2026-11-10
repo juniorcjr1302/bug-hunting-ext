@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f8f4;
+    color: #2a3a2a;
+    line-height: 1.5;
+}
+
+/* ========== CABEÇALHO ========== */
+.cabecalho {
+    background-color: #2d5f2d;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+.btn-hamburguer {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+@media (max-width: 700px) {
+    .btn-hamburguer {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #2d5f2d;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
+}
+
+.link-invisivel {
+    color: white;
+}
+
+/* ========== HERO ========== */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #d4e8d4, #f4f8f4);
+}
+
+.mascote {
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    color: #1e3f1e;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-hero {
+    color: #5a7a5a;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.cta-torto {
+    display: inline-block;
+    background-color: #7ab87a;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.cta-torto:hover {
+    background-color: #5c9c5c;
+}
+
+/* ========== CONTADOR ========== */
+.contador-secao {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: white;
+}
+
+.contador-secao h2 {
+    color: #2d5f2d;
+    margin-bottom: 1.5rem;
+}
+
+.contador-display {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #d94c4c;
+    margin-bottom: 1.5rem;
+}
+
+.botoes-contador {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.botoes-contador button {
+    background-color: #2d5f2d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botoes-contador button:hover {
+    background-color: #1e3f1e;
+}
+
+#btn-zerar {
+    background-color: #999;
+}
+
+#btn-zerar:hover {
+    background-color: #777;
+}
+
+.dica {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ========== BUGS MAIS PROCURADOS ========== */
+.procurados-secao {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.procurados-secao h2 {
+    color: #2d5f2d;
+    margin-bottom: 2rem;
+}
+
+.titulo-torto {
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card h3 {
+    color: #2d5f2d;
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.emoji-grande {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.card-cortado {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ========== FORMULÁRIO ========== */
+.formulario-secao {
+    padding: 3rem 2rem;
+    background-color: #eef4ee;
+}
+
+.formulario-secao > * {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario-secao h2 {
+    color: #2d5f2d;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitulo-form {
+    color: #5a7a5a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formulario-secao form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.formulario-secao label {
+    font-weight: 500;
+    color: #2a3a2a;
+}
+
+.formulario-secao input,
+.formulario-secao select,
+.formulario-secao textarea {
+    padding: 0.6rem;
+    border: 1px solid #cbd6cb;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.formulario-secao textarea {
+    resize: vertical;
+}
+
+.formulario-secao button {
+    background-color: #d94c4c;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.formulario-secao button:hover {
+    background-color: #b83a3a;
+}
+
+.mensagem {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+}
+
+.mensagem.erro {
+    background-color: #fde5e5;
+    color: #a02020;
+    display: block;
+}
+
+.mensagem.sucesso {
+    background-color: #e5f5e5;
+    color: #2d5f2d;
+    display: block;
+}
+
+/* ========== DEPOIMENTOS ========== */
+.depoimentos-secao {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.depoimentos-secao h2 {
+    color: #2d5f2d;
+    margin-bottom: 2rem;
+}
+
+#depoimentos-container {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 140px;
+}
+
+.depoimento {
+    display: none;
+    padding: 1.5rem;
+    background-color: #f4f8f4;
+    border-left: 4px solid #7ab87a;
+    border-radius: 4px;
+    font-style: italic;
+    text-align: left;
+}
+
+.depoimento.ativo {
+    display: block;
+}
+
+.depoimento cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #5a7a5a;
+    font-style: normal;
+}
+
+.dica-carrossel {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+/* ========== RODAPÉ ========== */
+.rodape {
+    background-color: #1e3f1e;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.rodape img {
+    border-radius: 8px;
+}
+
+.emoji-rodape {
+    font-size: 2rem;
+}
+
+.btn-emoji {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}

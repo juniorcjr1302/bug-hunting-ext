@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento Municipal de Caça aos Bugs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">🐛 DMCB</div>
+        <button class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav class="menu" id="menu">
+            <a href="#inicio">Início</a>
+            <a href="#capturados">Capturados</a>
+            <a href="#procurados" class="link-invisivel">Procurados</a>
+            <a href="#formulario">Denunciar</a>
+            <a href="#relatos">Relatos</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <img src="https://placehold.co/120x120/2d5f2d/ffffff?text=DMCB" alt="Mascote do DMCB" class="mascote">
+
+        <h1>Departamento Municipal de Caça aos Bugs</h1>
+        <p class="subtitulo-hero">Protegendo a cidade desde 1998</p>
+        <p>Aqui a gente extermina bugs — tanto os de software quanto os de seis patinhas. Denúncia é anônima. Café pro agente é opcional.</p>
+
+        <a href="#formulario" class="cta-torto">Denunciar um Bug 🕷️</a>
+    </section>
+
+    <section id="capturados" class="contador-secao">
+        <h2>Bugs Capturados este mês</h2>
+        <div id="contador" class="contador-display">0</div>
+        <div class="botoes-contador">
+            <button id="btn-incrementar">+ Capturar Bug</button>
+            <button id="btn-zerar">Zerar</button>
+        </div>
+        <p class="dica">Clique em "+ Capturar Bug" pra registrar um bug capturado. Aperte "Zerar" pra começar o mês novo.</p>
+    </section>
+
+    <section id="procurados" class="procurados-secao">
+        <h2 class="titulo-torto">Bugs Mais Procurados</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="emoji-grande">🕷️</div>
+                <h3>Aranha das Sombras</h3>
+                <p>Rasteja pelo rodapé. Recompensa: R$ 500</p>
+            </div>
+            <div class="card card-cortado">
+                <div class="emoji-grande">🐞</div>
+                <h3>Besouro Blindado</h3>
+                <p>Ignora updates de segurança. Recompensa: R$ 750</p>
+            </div>
+            <div class="card card-hover-quebrado">
+                <div class="emoji-grande">🐜</div>
+                <h3>Formiga Fantasma</h3>
+                <p>Aparece só em produção. Recompensa: R$ 1200</p>
+            </div>
+            <div class="card">
+                <div class="emoji-grande">🦟</div>
+                <h3>Mosquito da Memória</h3>
+                <p>Suga RAM da máquina. Recompensa: R$ 900</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario" class="formulario-secao">
+        <h2>Denuncie um Bug</h2>
+        <p class="subtitulo-form">Bugs pequenos, grandes, com asas, com bytes. Vamos investigar.</p>
+        <form id="form-denuncia">
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Ex: Maria da Silva">
+
+            <label for="email">Seu e-mail:</label>
+            <input type="text" id="email" name="email" placeholder="voce@email.com">
+
+            <label for="tipo">Tipo de bug:</label>
+            <select id="tipo" name="tipo">
+                <option value="">-- selecione --</option>
+                <option value="software">Bug de software</option>
+                <option value="inseto">Inseto de verdade</option>
+                <option value="misterioso">Não sei o que é</option>
+            </select>
+
+            <label for="descricao">Descreva o bug:</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva o bug..."></textarea>
+
+            <button type="submit" id="btn-enviar">Enviar Denúncia</button>
+        </form>
+        <div id="mensagem-form" class="mensagem"></div>
+    </section>
+
+    <section id="relatos" class="depoimentos-secao">
+        <h2>O que dizem os cidadãos</h2>
+        <div id="depoimentos-container">
+            <blockquote class="depoimento ativo">
+                <p>"Achei três bugs na minha cozinha e o DMCB resolveu em minutos!"</p>
+                <cite>— Dona Rita, dona de casa</cite>
+            </blockquote>
+            <blockquote class="depoimento">
+                <p>"O sistema estava cheio de baratas... digo, bugs. Sumiram todos!"</p>
+                <cite>— Sr. Almeida, empresário</cite>
+            </blockquote>
+            <blockquote class="depoimento">
+                <p>"Nunca mais vi um mosquito no meu console.log."</p>
+                <cite>— Júlia, desenvolvedora</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <img src="https://placehold.co/60x60/2d5f2d/ffffff?text=DMCB" alt="Logo DMCB" width="60" height="60">
+        <p>Departamento Municipal de Caça aos Bugs &copy; 2026</p>
+        <div class="emoji-rodape">🐛</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -17,6 +17,11 @@ BUG #6 — .card-hover-quebrado:hover: texto branco em fundo branco (some)
     padding: 0;
 }
 
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #f4f8f4;
@@ -56,6 +61,40 @@ body {
 
 .menu a:hover {
     opacity: 0.7;
+}
+
+.btn-hamburguer {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+@media (max-width: 700px) {
+    .btn-hamburguer {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #2d5f2d;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .menu.aberto {
+        display: flex;
+    }
 }
 
 /* BUG #1: cor do texto igual ao fundo do cabeçalho — o link "Procurados" some */
@@ -380,15 +419,6 @@ body {
 .emoji-rodape {
     font-size: 2rem;
     transform: rotate(180deg);
-}
-
-.btn-rodape {
-    background-color: #7ab87a;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .btn-emoji {

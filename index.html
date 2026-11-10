@@ -25,13 +25,15 @@
 
     <header class="cabecalho">
         <div class="logo">🐛 DMCB</div>
-        <nav class="menu">
+        <button class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir menu">☰</button>
+        <nav class="menu" id="menu">
             <a href="#inicio">Início</a>
             <a href="#capturados">Capturados</a>
             <!-- Link fica invisível por causa do CSS (BUG #1) -->
             <a href="#procurados" class="link-invisivel">Procurados</a>
             <!-- BUG #16: href="#" leva pro topo; deveria ser href="#formulario" -->
             <a href="#">Denunciar</a>
+            <a href="#relatos">Relatos</a>
         </nav>
     </header>
 
@@ -114,7 +116,7 @@
         <div id="mensagem-form" class="mensagem"></div>
     </section>
 
-    <section class="depoimentos-secao">
+    <section id="relatos" class="depoimentos-secao">
         <h2>O que dizem os cidadãos</h2>
         <div id="depoimentos-container">
             <blockquote class="depoimento ativo">
@@ -138,7 +140,6 @@
         <p>Departamento Municipal de Caça aos Bugs &copy; 2026</p>
         <!-- Emoji fica de cabeça pra baixo por CSS (BUG #5) -->
         <div class="emoji-rodape">🐛</div>
-        <button class="btn-rodape">Curtir 👍</button>
     </footer>
 
     <script src="script.js"></script>
